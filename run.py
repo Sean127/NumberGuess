@@ -1,5 +1,6 @@
 ''' Needed to obtain random number '''
 import random
+import sys
 
 MAX_GUESS = 3
 
@@ -8,7 +9,7 @@ def get_random_number():
     ''' Generates random number '''
     number = random.randint(1, 10)
     return number
- 
+
 
 def game():
     number = get_random_number()
@@ -28,6 +29,13 @@ def game():
             print('Your guess is too high.')
         else:
             print("Sorry, your out of attempts. The correct answer was", number)
+
+    again = input("Would you like to play again?[Y/N]").lower()
+    if again == 'y':
+        game()
+    elif again == 'n':
+        print("Thanks for playing")
+        sys.exit()
 
 
 def main():

@@ -1,31 +1,25 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Number Guessing Game
 
-Welcome Sean127,
+This programme is a number guessing game created within python. It runs within a provided, interactive console. It is designed to show how to handle integer inputs can be handled and checked wihtin python. A live version of the site can be found [here](https://sean-number-guess-d51024dc4294.herokuapp.com/)
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+### How it works
 
-## Reminders
+The app will ask the user to input a number between 1-10. The programme will check to see if the number is the same as the correct answer it has generated. The user will have 3 attempts to guess corectly otherwise the game will end.
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+![game image](images/numberguess.PNG)
+### Testing
 
-## Creating the Heroku app
+One particular problem I had was dealing with non-integer inputs. I was able to fix this by wrapping the code in a try statement and handling the value error within the except statement
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+The programme was also tested in the following ways:
+- Passing it throught a PEP8 linter and passing without any major issues
+- Giving invalid inputs and ensuring the errors are picked up
+- Tested both in a python terminal and on Heroku
 
-1. `heroku/python`
-2. `heroku/nodejs`
+### Depoloyment
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!
+- Steps for deployment
+    - Create a Heroku app
+    - Setup a config var called PORT and set to 8000
+    - Link the Heroku app to my GitHub repository
+    - Deploy the app [here](https://sean-number-guess-d51024dc4294.herokuapp.com/)

@@ -12,6 +12,7 @@ def get_random_number():
 
 
 def game():
+    ''' Main game code '''
     number = get_random_number()
     print("Welcome to the game")
     print("The game is simple. Pick a number between 1 and 10")
@@ -19,7 +20,6 @@ def game():
     no_of_guesses = 0
     correct = False
     while no_of_guesses < 3:
-        print(number)
         try:
             input_guess = input("Enter your guess:")
             guess = int(input_guess)
@@ -42,15 +42,16 @@ def game():
         if correct is False:
             print("Sorry, your out of attempts. The correct answer was", number)
 
-    again = input("Would you like to play again?[Y/N]").lower()
+    again = input('Enter "Y" to play again. Else you will exit the game: ').lower()
     if again == 'y':
         game()
-    elif again == 'n':
+    else:
         print("Thanks for playing!")
         sys.exit()
 
 
 def main():
+    ''' Runs main game function '''
     game()
 
 

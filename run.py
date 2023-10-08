@@ -17,12 +17,14 @@ def game():
     print("The game is simple. Pick a number between 1 and 10")
     print("You will have 3 attempts")
     no_of_guesses = 0
+    
     while no_of_guesses < 3:
         print(number)
         guess = int(input("Enter your guess:"))
         no_of_guesses += 1
         if guess == number:
             print("Congrats you guessed correctly")
+            no_of_guesses = 3
         elif guess < number:
             print('Your guess is too low.')
         elif guess > number:
